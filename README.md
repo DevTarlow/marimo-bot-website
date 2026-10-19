@@ -3,6 +3,8 @@
 The Marimo Bot coming-soon landing page: a quiet, botanical introduction to a desktop AI assistant
 that works in a folder you choose.
 
+**Live site:** <https://marimobot.com/>
+
 The page stays deliberately short: a small introduction, a clear note that the project is under
 active development, and a link to the public build on GitHub.
 
@@ -26,19 +28,22 @@ assets/fonts/          webfont files, licence and notices
 assets/brand/          marimo mascot and favicon
 assets/site.js         pointer parallax and current-year behaviour
 screenshots/           final desktop and mobile captures
+CNAME                  custom-domain setting for GitHub Pages
+.nojekyll              serve the files directly without Jekyll
 ```
 
-## Deploying
+## Deployment
 
-The site is a static page with no external runtime dependencies. To deploy it, upload:
+The site is published with GitHub Pages from the `main` branch at the repository root.
 
-```text
-index.html
-styles/site.css
-assets/
-```
+- **Custom domain:** `marimobot.com`
+- **Pages build:** <https://devtarlow.github.io/marimo-bot-website/>
+- **DNS:** Spaceship — four GitHub Pages `A` records on the apex and a `www` CNAME to
+  `devtarlow.github.io`
 
-The `screenshots/` directory is reference material only and does not need to be deployed.
+Every push to `main` deploys automatically. There is no build step and no external runtime dependency;
+only the files above are needed to serve the site. The `screenshots/` directory is reference material
+and is not required by the page.
 
 ## Screenshots
 
